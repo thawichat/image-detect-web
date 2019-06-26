@@ -1,29 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav>
+      <div class="nav-wrapper teal">
+        <a class="brand-logo" style="margin-left: 25px">
+          <span id='strong'>Image</span>
+          <span id="lite">detection</span>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 20px">
+          <li><router-link to="/label"><span id="menu">Label</span></router-link></li>
+          <li><router-link to="/landmark"><span id="menu">Landmark</span></router-link></li>
+        </ul>
+      </div>
+    </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  #strong {
+    font-weight: 800
   }
-}
+  #lite {
+    font-weight: 350
+  }
+  #menu {
+    font-weight: 600
+  }
 </style>
