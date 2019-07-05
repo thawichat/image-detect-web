@@ -1,6 +1,6 @@
 export const googleApiConfig = {
   endpoint: 'https://vision.googleapis.com/v1/images:annotate?key=',
-  apiKey: '-----GOOGLE API KEY-----',
+  apiKey: 'AIzaSyAeFRJdyqTAN6EPb22O0IH17oRPbTPrC9w',
   body: {
     requests:[
       {
