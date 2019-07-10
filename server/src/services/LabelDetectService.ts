@@ -8,7 +8,7 @@ export class LabelDetectService {
   public async labelDetect(srcFile): Promise<Object> {
     googleApiConfig.body.requests[0].image.content = srcFile;
     googleApiConfig.body.requests[0].features.type = 'LABEL_DETECTION';
-    googleApiConfig.body.requests[0].features.maxResults = 8;
+    googleApiConfig.body.requests[0].features.maxResults = 10;
 
     const options = {
       method: 'POST',

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import LabelDetect from './views/LabelDetect.vue';
+import LandmarkDetect from './views/LandmarkDetect.vue';
 
 Vue.use(Router);
 
@@ -9,14 +10,18 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/',
+      component: LabelDetect,
+    },
+    {
       path: '/label',
       name: 'home',
-      component: Home,
+      component: LabelDetect,
     },
     {
       path: '/landmark',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: LandmarkDetect,
     },
   ],
 });

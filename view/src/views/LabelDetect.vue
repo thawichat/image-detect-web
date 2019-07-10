@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="labeldetect">
     <div class="container" id="blog">
       <form>
         <div class="file-field input-field">
@@ -19,7 +19,7 @@
         </a>
       </div>
 
-      <div class="row valign-wrapper" v-if="img">
+      <div class="row" v-if="img" v-bind:class="[isLoading ? 'valign-wrapper' : '']">
         <div class="col s6">
           <div class="card-panel">
             <img :src="img" id="preview">
@@ -54,7 +54,7 @@ import LabelData from '@/ts/responses/LabelData';
     Loading,
   },
 })
-export default class Home extends Vue {
+export default class LabelDetect extends Vue {
   public img: any = null;
   public file: any = null;
   public isResult = false;
@@ -72,6 +72,7 @@ export default class Home extends Vue {
   }
 
   public async detect() {
+    if (this.isResult) { return; }
     this.isLoading = true;
     const response = await this.service.labelDetect(this.file);
     this.labelData = response.data;
