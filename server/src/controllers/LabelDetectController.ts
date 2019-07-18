@@ -9,4 +9,8 @@ export class LabelDetectController {
     const response = await service.labelDetect(imageEncoded);
     res.status(200).send(response);
   }
+
+  public hello(req: Request, res: Response) {
+    res.status(200).send("<h1>Hello from Labeldetect service</h1>");
+  }
 }
