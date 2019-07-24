@@ -11,6 +11,6 @@ export class LabelDetectController {
   }
 
   public hello(req: Request, res: Response) {
-    res.status(200).send("<h1>Hello from Labeldetect service</h1>");
+    res.status(200).send('<html><head><title>Welcome to nginx!</title></head><body><h1>Welcome to IMAGE-DETECT-SERVER</h1></body></html>');
   }
 }
