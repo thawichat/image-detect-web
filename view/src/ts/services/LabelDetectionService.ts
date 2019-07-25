@@ -1,10 +1,9 @@
 import * as Axios from './Axios';
-import AccessPoint from '../serveraccess/AccessPoint';
 import LabelResponse from '../responses/LabelResponse';
 import { AxiosRequestConfig } from 'axios';
 
 export default class LabelDetectionService {
-    private path = AccessPoint.LOCAL;
+
 
     public async labelDetect(file: File): Promise<LabelResponse> {
         return await this.labelDetectInner(file);
@@ -16,7 +15,7 @@ export default class LabelDetectionService {
 
         const axiosConfig: AxiosRequestConfig = {
             method: 'post',
-            url: `${this.path}/labeldetect`,
+            url: `/api/labeldetect`,
             data: formData,
             headers: {'Content-Type': 'multipart/form-data' },
         };
