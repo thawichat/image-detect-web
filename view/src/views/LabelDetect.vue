@@ -64,6 +64,7 @@ export default class LabelDetect extends Vue {
   private service = new LabelDetectionService();
 
   public getImage(srcImage: any) {
+    this.img = null;
     this.isResult = false;
     this.file = srcImage.target.files[0];
     if (this.file) {

@@ -1,14 +1,5 @@
 version: '3'
 services: 
-  # Setup client container
-  frontend:
-    build: ./view
-    container_name: image-detect-client
-    command: npm run serve
-    ports: 
-      - 8080:8080
-    volumes: 
-      - ./view/frontend:/app/client
     
   # Setup server container
   backend:
@@ -19,3 +10,13 @@ services:
       - 3000:3000
     volumes: 
       - ./server/backend:/app/server
+
+  # Setup client container
+  frontend:
+    build: ./view
+    container_name: image-detect-client
+    command: npm run serve
+    ports: 
+      - 8080:8080
+    volumes: 
+      - ./view/frontend:/app/client

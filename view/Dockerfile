@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . /usr/src/app/client
 
-EXPOSE 3000
+EXPOSE 8080

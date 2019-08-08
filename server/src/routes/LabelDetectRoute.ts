@@ -6,7 +6,6 @@ export class LabelDetectRoute {
   private controller = new LabelDetectController();
 
   public routes(app) {
-    app.get('/', this.controller.hello);
     app.post('/labeldetect', multer().single('file'), this.controller.detect);
   }
 }

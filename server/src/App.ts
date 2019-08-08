@@ -1,17 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-
-import { LabelDetectRoute } from './routes/LabelDetectRoute';
+import { IndexRoutes } from './routes/IndexRoutes';
 
 class App {
   public app = express.application;
-  private labelDetectRoute = new LabelDetectRoute();
+  private indexRoutes = new IndexRoutes();
 
   constructor() {
     this.app = express();
     this.config();
-    this.labelDetectRoute.routes(this.app);
+    this.indexRoutes.routes(this.app);
   }
 
   private config() {

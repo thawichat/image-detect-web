@@ -9,8 +9,4 @@ export class LabelDetectController {
     const response = await service.labelDetect(imageEncoded);
     res.status(200).send(response);
   }
-
-  public hello(req: Request, res: Response) {
-    res.status(200).send('<html><head><title>Welcome to nginx!</title></head><body><h1>Welcome to IMAGE-DETECT-SERVER</h1></body></html>');
-  }
 }
