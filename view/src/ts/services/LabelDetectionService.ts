@@ -1,15 +1,15 @@
 import * as Axios from './Axios';
-import LandmarkResponse from '../responses/LandmarkResponse';
+import LabelResponse from '../responses/LabelResponse';
 import { AxiosRequestConfig } from 'axios';
 
 export default class LabelDetectionService {
 
 
-    public async labelDetect(file: File): Promise<LandmarkResponse> {
+    public async labelDetect(file: File): Promise<LabelResponse> {
         return await this.labelDetectInner(file);
     }
 
-    private async labelDetectInner(file: File): Promise<LandmarkResponse> {
+    private async labelDetectInner(file: File): Promise<LabelResponse> {
         const formData = new FormData();
         formData.append('file', file);
 
